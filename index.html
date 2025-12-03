@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens & Light | Photography Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Lens & Light</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#booking">Book Session</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Capturing Life's Best Moments</h1>
+            <p>Professional Photography based in India.</p>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio-section">
+        <h2>My Work</h2>
+        
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('nature')">Nature</button>
+            <button class="btn" onclick="filterSelection('portrait')">Portrait</button>
+            <button class="btn" onclick="filterSelection('wedding')">Wedding</button>
+        </div>
+
+        <div class="row">
+            <div class="column nature">
+                <div class="content">
+                    <img src="https://picsum.photos/id/1015/600/400" alt="Nature" style="width:100%">
+                    <h4>Valley View</h4>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Nature" style="width:100%">
+                    <h4>Mountains</h4>
+                </div>
+            </div>
+            <div class="column portrait">
+                <div class="content">
+                    <img src="https://picsum.photos/id/1027/600/400" alt="Portrait" style="width:100%">
+                    <h4>Street Portrait</h4>
+                </div>
+            </div>
+            <div class="column portrait">
+                <div class="content">
+                    <img src="https://picsum.photos/id/338/600/400" alt="Portrait" style="width:100%">
+                    <h4>Studio Shot</h4>
+                </div>
+            </div>
+            <div class="column wedding">
+                <div class="content">
+                    <img src="https://picsum.photos/id/250/600/400" alt="Wedding" style="width:100%">
+                    <h4>The Rings</h4>
+                </div>
+            </div>
+            <div class="column wedding">
+                <div class="content">
+                    <img src="https://picsum.photos/id/349/600/400" alt="Wedding" style="width:100%">
+                    <h4>Celebration</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <h2>Book a Session</h2>
+        <div class="pricing-container">
+            <div class="price-card">
+                <h3>Basic Portrait</h3>
+                <p class="price">₹5,000</p>
+                <ul>
+                    <li>1 Hour Session</li>
+                    <li>10 Edited Photos</li>
+                    <li>1 Location</li>
+                </ul>
+                <button class="book-btn" onclick="openBookingForm('Basic Portrait')">Select Package</button>
+            </div>
+            <div class="price-card highlight">
+                <h3>Wedding Standard</h3>
+                <p class="price">₹45,000</p>
+                <ul>
+                    <li>Full Day Coverage</li>
+                    <li>200 Edited Photos</li>
+                    <li>Album Included</li>
+                </ul>
+                <button class="book-btn" onclick="openBookingForm('Wedding Standard')">Select Package</button>
+            </div>
+            <div class="price-card">
+                <h3>Event Coverage</h3>
+                <p class="price">₹15,000</p>
+                <ul>
+                    <li>4 Hour Session</li>
+                    <li>50 Edited Photos</li>
+                    <li>Digital Delivery</li>
+                </ul>
+                <button class="book-btn" onclick="openBookingForm('Event Coverage')">Select Package</button>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Contact Details</h3>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <button onclick="submitForm()">Confirm Booking</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Lens & Light Photography. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
